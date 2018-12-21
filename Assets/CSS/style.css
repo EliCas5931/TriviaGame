@@ -1,0 +1,35 @@
+body {
+    background-image: url("../Images/background.png");
+    background-repeat: repeat;
+}
+
+#container {
+    height: 600px;
+    width: 1000px;
+    border: 1px solid red;
+    background-color: black;
+    margin: 60px 200px;
+}
+
+button {
+    border-radius: 15px;
+    height: 100px;
+    width: 300px;
+    padding: 40px;
+    margin: 20px;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+#quizSection {
+    height: 400px;
+    width: 400px;
+    border-color: 5px pink;
+    border-radius: 15px;
+}
