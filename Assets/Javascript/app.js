@@ -20,7 +20,57 @@
 // Add a "start over button" that does NOT refresh the page, but just resets the game
 
 // Questions user will answer
-var questions
+var myQuestions = [{
+    question: "Which fighting game has sold the most copies in history?",
+    choices: ["Super Smash Bros Brawl", "Mortal Kombat X", "Tekken 5", "Street Fighter 2"],
+    actAnswer: 0
+},
+{
+    question: "Which is the highest grossing video game franchise?",
+    choices: ["Grand Theft Auto", "Mario", "Pokemon", "Call of Duty"],
+    actAnswer: 1
+},
+{
+    question: "What is believed to be the first ever MMORPG?",
+    choices: ["Ultima Online", "Everquest", "World of Warcraft", "Meridian 59"],
+    actAnswer: 3
+},
+{
+    question: "You have found yourself in the land of Val Oriyn.... what game are you playing?",
+    choices: ["World of Warcraft", "Tera", "Skyrim", "Diablo 3"],
+    actAnswer: 1
+},
+{
+    question: "What is the highest selling console of all time?",
+    choices: ["Sony's PlayStation 2", "Microsoft's Xbox 360", "Nintendo's DS", "Sega Genesis"],
+    actAnswer: 0
+},
+{
+    question: "Which of these is the best selling game of all time on Xbox One?",
+    choices: ["Destiny 2", "Grand Theft Auto 4", "Call of Duty: WWII", "Battlefield 4"],
+    actAnswer: 2
+},
+{
+    question: "Which of these video game characters never speaks?",
+    choices: ["Master Chief", "Mario", "Nathan Drake", "Link"],
+    actAnswer: 3
+},
+{
+    question: "Which was the first ever video game console?",
+    choices: ["Magnavox Odyssey", "Atari 2600", "Intellivision", "Sega SG-100"],
+    actAnswer: 0
+},
+{
+    quesiton: "What is the maximum number of supported controllers for the Playstation 3?",
+    choices: ["Four", "Six", "Seven", "Ten"],
+    actAnswer: 2
+},
+{
+    question: "What is Megaman's name in Japan?",
+    choices: ["Misterman", "Amazingman", "Rockman", "Superman"],
+    actAnswer: 2
+}
+];
 
 // User got correct
 var correct = 0;
@@ -37,18 +87,65 @@ var userAnswer
 // Actual answer to question
 var actAnswer
 
+var time = 21;
+
+var timer;
+
+var answerTime = 20;
+
+var answerTimer;
+var showAnswers;
+
 alert("Welcome to trivial trivia!");
 
-// either do it the following way or change the button in html...
-// $("#startButton").onClick = function() {start};
+$(document).ready(function () {
 
-var start = function() {
+    $("#startUp").hide();
 
-    function questions(text, choices, answer) {
+    // either do it the following way or change the button in html...
+    // $("#startButton").onClick = function() {start};
+    $("#startButton").click(function () {
+        $("p").hide();
+        $("h1").hide();
+        $("#startButton").hide();
+        $("#startUp").show();
+    });
 
-    }   
 
-    var score = function() {
+
+    for (var i = 0; i < myQuestions.length; i++) {
+        var question = myQuestions[i].question;
+        console.log(question);
+        var choices = myQuestions[i].choices;
+        console.log(choices);
+
+    }
+
+    // Countdown timer to answer question
+    
+        timer = setInterval(function () {
+            time--;
+            $("#countdown").html("<h3>You have " + time + " seconds left!</h3>");
+        }, 1000)
+
+        if (time === 0) {
+            alert("Time's Up!")// can't get it to stop after 0! ugh clearInterval(timer);
+        }
+    
+
+    // Show answers page
+    //function showAnswers() {
+      //  answerTimer = setInterval(function () {
+        //    answerTime--;
+          //  $("#").html("<h2>The correct answer is " + actAnswer + "!</h2>");
+        //}, 1000)
+
+        //if (answerTime === 0) {
+          //  timer();
+        //}
+    
+
+    var score = function () {
         if (userAnswer === actAnswer) {
             correct++;
         } else {
@@ -56,4 +153,28 @@ var start = function() {
         }
 
     }
-}
+
+
+})
+
+
+// function myQuestions(question, choices, actAnswer) {
+    //this.question = question;
+    //this.choices = choices;
+    //this.actAnswer = actAnswer;
+//}
+
+//function setupTrivia() {
+  //$('#triviaQuestions').html(parseInt(currentQuestion) + 1 + " . " + myQuestions[currentQuestion].question);
+   //console.log(currentQuestion);
+//}
+
+
+
+
+
+//var start = function() {
+
+  //  function questions(text, choices, answer) {
+
+    //} 

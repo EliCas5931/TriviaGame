@@ -3,12 +3,14 @@ body {
     background-repeat: repeat;
 }
 
-#container {
+#triviaContainer {
     height: 600px;
     width: 1000px;
     border: 1px solid red;
     background-color: black;
     margin: 60px 200px;
+    text-align: center;
+    color: white;
 }
 
 button {
@@ -32,4 +34,13 @@ h1 {
     width: 400px;
     border-color: 5px pink;
     border-radius: 15px;
+}
+
+p {
+    color: white;
+}
+
+h2 {
+    height: 200px;
+    width: 1000px;
 }
