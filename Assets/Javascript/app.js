@@ -19,6 +19,8 @@
 // Display score at the end of the game
 // Add a "start over button" that does NOT refresh the page, but just resets the game
 
+$(document).ready(function () {
+
 // Questions user will answer
 var myQuestions = [{
     question: "Which fighting game has sold the most copies in history?",
@@ -72,33 +74,31 @@ var myQuestions = [{
 }
 ];
 
-// User got correct
+var questionCounter = 0;
+
+var showAnswers = 5000;
+
+// User score
 var correct = 0;
-
-// User got wrong
 var wrong = 0;
+var unanswered = 0;
 
-// User didn't answer in the given amount of time
-var unanswered
+var userAnswer = [];
 
-// Log their choice
-var userAnswer
-
-// Actual answer to question
 var actAnswer
 
-var time = 21;
-
+var time = 21
 var timer;
 
 var answerTime = 20;
 
 var answerTimer;
-var showAnswers;
+
+var startTrivia;
 
 alert("Welcome to trivial trivia!");
 
-$(document).ready(function () {
+
 
     $("#startUp").hide();
 
@@ -109,53 +109,106 @@ $(document).ready(function () {
         $("h1").hide();
         $("#startButton").hide();
         $("#startUp").show();
+        startTrivia();
     });
 
 
+function submitAnswer() {
+    $("").on("click", )
+}
 
-    for (var i = 0; i < myQuestions.length; i++) {
-        var question = myQuestions[i].question;
-        console.log(question);
-        var choices = myQuestions[i].choices;
-        console.log(choices);
+    var startTrivia = function () {
+
+        $(".buttons").empty();
+
+        for (var i = 0; i < 10; i++) {
+
+            var questionCount = $(myQuestions).length;
+
+            questionOrder = [];
+
+            while (questionOrder.length < questionCount) {
+                var random = Math.floor(Math.random() * questionCount);
+                if (questionOrder.indexOf(random) === -1) questionOrder.push(random);
+                questionAsked = 0;
+                hideAllEx(questionOrder[questionAsked]);
+            }
+
+            for (var i = 0; i < 4; i++) {
+            var options = $("<button>");
+            options.attr({
+                "id": 'button' + i,
+            });
+            $(".buttons").append(options);
+        }
+    }
 
     }
 
-    // Countdown timer to answer question
-    
-        timer = setInterval(function () {
-            time--;
-            $("#countdown").html("<h3>You have " + time + " seconds left!</h3>");
-        }, 1000)
-
-        if (time === 0) {
-            alert("Time's Up!")// can't get it to stop after 0! ugh clearInterval(timer);
+    function hideAllEx(question) {
+        for (var i = 0; i < myQuestions.length; i++) {
+            var question = myQuestions[i].question;
+            console.log(question);
+            var choices = myQuestions[i].choices;
+            console.log(choices);
         }
-    
+
+    }
+
+
+
+
+    function run() {
+        clearInterval(timer);
+        timer = setInterval(decrease, 1000);
+    }
+
+    function decrease() {
+        time--;
+        $("#countdown").html("<h3>You have " + time + " seconds left!</h3>");
+        if (time === 0) {
+            stop();
+        }
+    }
+
+    function stop() {
+        clearInterval(timer);
+    }
+
+    run();
+}
+
+
+
+    // Countdown timer to answer question
+
+
+
+
 
     // Show answers page
     //function showAnswers() {
-      //  answerTimer = setInterval(function () {
-        //    answerTime--;
-          //  $("#").html("<h2>The correct answer is " + actAnswer + "!</h2>");
-        //}, 1000)
+    //  answerTimer = setInterval(function () {
+    //    answerTime--;
+    //  $("#").html("<h2>The correct answer is " + actAnswer + "!</h2>");
+    //}, 1000)
 
-        //if (answerTime === 0) {
-          //  timer();
-        //}
-    
-
-    var score = function () {
-        if (userAnswer === actAnswer) {
-            correct++;
-        } else {
-            wrong++;
-        }
-
-    }
+    //if (answerTime === 0) {
+    //  timer();
+    //}
 
 
-})
+    //var score = function () {
+   // if (userAnswer === actAnswer) {
+    //    correct++;
+  //  } else {
+   //     wrong++;
+   // }
+
+//}
+
+
+//})
 
 
 // function myQuestions(question, choices, actAnswer) {
@@ -177,4 +230,4 @@ $(document).ready(function () {
 
   //  function questions(text, choices, answer) {
 
-    //} 
+    // 
