@@ -4,14 +4,67 @@ body {
 }
 
 #triviaContainer {
-    height: 600px;
-    width: 1000px;
+    height: 800px;
+    width: 1400px;
     border: 1px solid red;
     background-color: black;
     margin: 60px 200px;
     text-align: center;
     color: white;
 }
+
+#startup {
+    height: 750px;
+    width: 1300px;
+}
+
+#quizSection {
+    height: 375px;
+    width: 1300px;
+    border-color: 5px pink;
+    border-radius: 15px;
+}
+
+#countdown {
+    height: 175px;
+    width: 1300px;
+    text-align: center;
+}
+
+#triviaQuestions {
+    height: 200px;
+    width: 1300px;
+    text-align: center;
+    color: white;
+}
+
+#showAnswers {
+    height: 375px;
+    width: 1300px;
+    text-align: center;
+}
+
+.answer {
+    height: 75px;
+    width: 600px;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.answer:hover {
+    background: purple;
+}
+
+#instructions {
+    padding: 60px;
+}
+
+#startButton {
+    margin-top: 60px;
+}
+
+
 
 button {
     border-radius: 15px;
@@ -25,22 +78,9 @@ h1 {
     color: white;
     font-size: 50px;
     text-align: center;
-    padding: 20px;
     font-family: 'Courier New', Courier, monospace;
-}
-
-#quizSection {
-    height: 400px;
-    width: 400px;
-    border-color: 5px pink;
-    border-radius: 15px;
 }
 
 p {
     color: white;
-}
-
-h2 {
-    height: 200px;
-    width: 1000px;
 }
