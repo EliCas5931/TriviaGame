@@ -1,5 +1,6 @@
-$(document).ready(function () {
-    $("#resetTrivia").hide();
+$("#startButton").on("click", function() {
+    $("##startButton").hide();
+})
     
     var questionCounter = 0;
     
@@ -16,39 +17,52 @@ $(document).ready(function () {
 
     var userAnswer = [];
 
-    var myQuestions = [
-        "Which fighting game has sold the most copies in history?",
-        "What is believed to be the first ever MMORPG?",
-        "You have found yourself in the land of Val Oriyn.... what game are you playing?",
-        "What is the highest selling console of all time?",
-        "Which of these is the best selling game of all time on Xbox One?",
-        "Which of these video game characters never speaks?",
-        "Which was the first ever video game console?",
-        "What is the maximum number of supported controllers for the Playstation 3?",
-        "What is Megaman's name in Japan?"
-    ];
-    var myAnswers = [
-        ["Super Smash Bros Brawl", "Mortal Kombat X", "Tekken 5", "Street Fighter 2"],
-        ["Ultima Online", "Everquest", "World of Warcraft", "Meridian 59"],
-        ["World of Warcraft", "Tera", "Skyrim", "Diablo 3"],
-        ["Sony Playstation 2", "Microsoft Xbox 360", "Nintendo DS", "Sega Genesis"],
-        ["Destiny 2", "Grand Theft Auto 4", "Call of Duty: WWII", "Battlefield 4"],
-        ["Master Chief", "Mario", "Nathan Drake", "Link"],
-        ["Magnavox Odyssey", "Atari 2600", "Intellivision", "Sega SG-100"],
-        ["Four", "Six", "Seven", "Ten"],
-        ["Misterman", "Amazingman", "Rockman", "Superman"],
-    ];
-    var actAnswer = [
-        "Super Smash Bros Brawl",
-        "Meridian 59",
-        "Tera",
-        "Sony PlayStation 2",
-        "Call of Duty: WWII",
-        "Link",
-        "Magnavox Odyssey",
-        "Seven",
-        "Rockman"
-    ];
+    var triviaQuestions = [{
+        question: "Which fighting game has sold the most copies in history?",
+        answerChoices: ["Super Smash Bros Brawl", "Mortal Kombat X", "Tekken 5", "Street Fighter 2"],
+        actualAnswer: 0
+    },{
+        question: "What is believed to be the first ever MMORPG?",
+        answerChoices: ["Ultima Online", "Everquest", "World of Warcraft", "Meridian 59"],
+        actualAnswer: 3
+    },{
+        question: "You have found yourself in the land of Val Oriyn.... what game are you playing?",
+        answerChoices: ["World of Warcraft", "Tera", "Skyrim", "Diablo 3"],
+        actualAnswer: 1
+    }, {
+        question: "What is the highest selling console of all time?",
+        answerChoices: ["Sony Playstation 2", "Microsoft Xbox 360", "Nintendo DS", "Sega Genesis"],
+        actualAnswer: 0
+    },{
+        question: "Which of these is the best selling game of all time on Xbox One?",
+        answerChoices: ["Destiny 2", "Grand Theft Auto 4", "Call of Duty: WWII", "Battlefield 4"],
+        actualAnswer: 2
+    },{
+        question: "Which of these video game characters never speaks?",
+        answerChoices: ["Master Chief", "Mario", "Nathan Drake", "Link"],
+        actualAnswer: 3
+    },{
+        question: "Which was the first ever video game console?",
+        answerChoices: ["Magnavox Odyssey", "Atari 2600", "Intellivision", "Sega SG-100"],
+        actualAnswer: 0
+    },{
+        question: "What is the maximum number of supported controllers for the Playstation 3?",
+        answerChoices: ["Four", "Six", "Seven", "Ten"],
+        actualAnswer: 2
+    },{
+        question: "What is Megaman's name in Japan?",
+        answerChoices: ["Misterman", "Amazingman", "Rockman", "Superman"],
+        actualAnswer: 2
+    },{
+        question: "Which Esports game had the highest prize pool in 2018?",
+        answerChoices: ["Call of Duty", "Dota 2", "League of Legends", "Counter Strike"],
+        actualAnswer: 1
+    },{
+        question: "Which iOs mobile game was the highest grossing in December 2018?",
+        answerChoices: ["Candy Crush Saga", "Fortnite", "Roblox", "Pokemon Go"],
+        actualAnswer: 3
+    }];
+
     var selectedAnswer;
     var gameTrivia; //same as gameHTML
 
