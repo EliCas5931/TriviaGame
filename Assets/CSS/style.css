@@ -3,6 +3,26 @@ body {
     background-repeat: repeat;
 }
 
+h1,p {
+    text-align: center;
+}
+
+h1 {
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 80px!important;
+}
+
+p {
+    color: white;
+}
+
+#instructions {
+    font-size: 20px!important;
+}
+
 #triviaContainer {
     height: 800px;
     width: 1400px;
@@ -13,74 +33,79 @@ body {
     color: white;
 }
 
-#startup {
-    height: 750px;
-    width: 1300px;
+#beginning {
+    margin: 20px;
+    padding: 20px;
 }
 
-#quizSection {
+.answer-button {
+    height: 250px;
+    width: 450px;
+    margin: 30px;
+    color: white;
+    background-color: red;
+    border: 5px solid red;
+    border-radius: 15px;
+    font-size: 40px;
+}
+
+
+
+
+/* #startup {
+    height: 750px;
+    width: 1300px;
+} */
+
+/* #quizSection {
     height: 375px;
     width: 1300px;
     border-color: 5px pink;
     border-radius: 15px;
-}
+} */
 
-#countdown {
+/* #countdown {
     height: 175px;
     width: 1300px;
     text-align: center;
-}
+} */
 
-#triviaQuestions {
+/* #triviaQuestions {
     height: 200px;
     width: 1300px;
     text-align: center;
     color: white;
-}
+} */
 
-#showAnswers {
+/* #showAnswers {
     height: 375px;
     width: 1300px;
     text-align: center;
-}
+} */
 
-.answer {
+/* .answer {
     height: 75px;
     width: 600px;
     color: white;
     padding: 20px;
     text-align: center;
-}
+} */
 
-.answer:hover {
-    background: purple;
-}
-
-#instructions {
+/* #instructions {
     padding: 60px;
-}
+} */
 
-#startButton {
+/* #startButton {
     margin-top: 60px;
-}
+} */
 
 
 
-button {
-    border-radius: 15px;
-    height: 100px;
+/* button {
+    border-radius: 25px;
+    height: 150px;
     width: 300px;
     padding: 40px;
     margin: 20px;
-}
+} */
 
-h1 {
-    color: white;
-    font-size: 50px;
-    text-align: center;
-    font-family: 'Courier New', Courier, monospace;
-}
-
-p {
-    color: white;
-}
