@@ -31,6 +31,7 @@ p {
     margin: 60px 200px;
     text-align: center;
     color: white;
+    opacity: .95;
 }
 
 #beginning {
@@ -38,7 +39,7 @@ p {
     padding: 20px;
 }
 
-.answer-button {
+.answer-button, #resetBtn {
     height: 250px;
     width: 450px;
     margin: 30px;
@@ -49,63 +50,7 @@ p {
     font-size: 40px;
 }
 
-
-
-
-/* #startup {
-    height: 750px;
-    width: 1300px;
-} */
-
-/* #quizSection {
-    height: 375px;
-    width: 1300px;
-    border-color: 5px pink;
-    border-radius: 15px;
-} */
-
-/* #countdown {
-    height: 175px;
-    width: 1300px;
-    text-align: center;
-} */
-
-/* #triviaQuestions {
-    height: 200px;
-    width: 1300px;
-    text-align: center;
-    color: white;
-} */
-
-/* #showAnswers {
-    height: 375px;
-    width: 1300px;
-    text-align: center;
-} */
-
-/* .answer {
-    height: 75px;
-    width: 600px;
-    color: white;
-    padding: 20px;
-    text-align: center;
-} */
-
-/* #instructions {
-    padding: 60px;
-} */
-
-/* #startButton {
-    margin-top: 60px;
-} */
-
-
-
-/* button {
-    border-radius: 25px;
-    height: 150px;
-    width: 300px;
-    padding: 40px;
-    margin: 20px;
-} */
-
+#gameFinished {
+    margin: 50px;
+    font-size: 80px;
+}
